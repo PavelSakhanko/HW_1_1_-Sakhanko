@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct HomeScreen: View {
+
+    struct Defaults {
+        static let buttonTitle = "Open List"
+    }
+
+    @Binding var tabSelection: Int
+
     var body: some View {
-        Text("Home")
-            .padding()
+        Button(action: {
+            tabSelection = 2
+        }) {
+            Text(Defaults.buttonTitle)
+        }.buttonStyle(GradientButtonStyle())
     }
 }

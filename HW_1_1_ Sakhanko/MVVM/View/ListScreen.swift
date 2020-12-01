@@ -27,6 +27,6 @@ struct ListScreen: View {
                 }
           }
             .navigationBarTitle(Defaults.listTitle)
-        }
-    } //NavigationView
+        } //NavigationView
+    }
 }

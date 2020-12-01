@@ -15,12 +15,12 @@ struct RootView: View {
         static let modalTabTitle = "Modal"
     }
 
-    @State private var selection = 0
+    @State private var selectedItem = 1
 
     var body: some View {
-        TabView(selection: $selection,
+        TabView(selection: $selectedItem,
                 content:  {
-                    HomeScreen().tabItem {
+                    HomeScreen(tabSelection: $selectedItem).tabItem {
                         Image(systemName: "house")
                         Text(Defaults.homeTabTitle)
                     }.tag(1)
