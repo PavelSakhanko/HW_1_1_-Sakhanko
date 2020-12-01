@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4B0D00AD25768BBC00921C15 /* HW_1_1__SakhankoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D00AC25768BBC00921C15 /* HW_1_1__SakhankoApp.swift */; };
-		4B0D00AF25768BBC00921C15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D00AE25768BBC00921C15 /* ContentView.swift */; };
+		4B0D00AF25768BBC00921C15 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D00AE25768BBC00921C15 /* RootView.swift */; };
 		4B0D00B125768BBE00921C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0D00B025768BBE00921C15 /* Assets.xcassets */; };
 		4B0D00B425768BBE00921C15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0D00B325768BBE00921C15 /* Preview Assets.xcassets */; };
+		4B3C00D7257692AE006F7A37 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00D6257692AE006F7A37 /* HomeScreen.swift */; };
+		4B3C00DA257692D3006F7A37 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00D9257692D3006F7A37 /* ListScreen.swift */; };
+		4B3C00DD257692F0006F7A37 /* ModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00DC257692F0006F7A37 /* ModalScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B0D00A925768BBC00921C15 /* HW_1_1_ Sakhanko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW_1_1_ Sakhanko.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0D00AC25768BBC00921C15 /* HW_1_1__SakhankoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_1_1__SakhankoApp.swift; sourceTree = "<group>"; };
-		4B0D00AE25768BBC00921C15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B0D00AE25768BBC00921C15 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4B0D00B025768BBE00921C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0D00B325768BBE00921C15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B0D00B525768BBE00921C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B3C00D6257692AE006F7A37 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		4B3C00D9257692D3006F7A37 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
+		4B3C00DC257692F0006F7A37 /* ModalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +58,8 @@
 		4B0D00AB25768BBC00921C15 /* HW_1_1_ Sakhanko */ = {
 			isa = PBXGroup;
 			children = (
-				4B0D00AC25768BBC00921C15 /* HW_1_1__SakhankoApp.swift */,
-				4B0D00AE25768BBC00921C15 /* ContentView.swift */,
+				4B3C00E02576933A006F7A37 /* App */,
+				4B3C00DF2576932C006F7A37 /* MVVM */,
 				4B0D00B025768BBE00921C15 /* Assets.xcassets */,
 				4B0D00B525768BBE00921C15 /* Info.plist */,
 				4B0D00B225768BBE00921C15 /* Preview Content */,
@@ -67,6 +73,49 @@
 				4B0D00B325768BBE00921C15 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4B3C00DF2576932C006F7A37 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				4B3C00E12576934F006F7A37 /* Model */,
+				4B3C00E225769399006F7A37 /* View */,
+				4B3C00E3257693AD006F7A37 /* ViewModel */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		4B3C00E02576933A006F7A37 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4B0D00AC25768BBC00921C15 /* HW_1_1__SakhankoApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4B3C00E12576934F006F7A37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B3C00E225769399006F7A37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B0D00AE25768BBC00921C15 /* RootView.swift */,
+				4B3C00D6257692AE006F7A37 /* HomeScreen.swift */,
+				4B3C00D9257692D3006F7A37 /* ListScreen.swift */,
+				4B3C00DC257692F0006F7A37 /* ModalScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B3C00E3257693AD006F7A37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B0D00AF25768BBC00921C15 /* ContentView.swift in Sources */,
+				4B0D00AF25768BBC00921C15 /* RootView.swift in Sources */,
+				4B3C00DD257692F0006F7A37 /* ModalScreen.swift in Sources */,
 				4B0D00AD25768BBC00921C15 /* HW_1_1__SakhankoApp.swift in Sources */,
+				4B3C00D7257692AE006F7A37 /* HomeScreen.swift in Sources */,
+				4B3C00DA257692D3006F7A37 /* ListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
