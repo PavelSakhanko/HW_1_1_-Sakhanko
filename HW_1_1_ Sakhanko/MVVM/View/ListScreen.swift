@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ListScreen: View {
-    var body: some View {
-        Text("2")
-            .padding()
+    
+    struct Defaults {
+        static let listTitle = "Cars"
     }
-}
 
-struct ListScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        ListScreen()
-    }
+    @ObservedObject var viewModel: CarViewModel
+
+    var body: some View {
+        NavigationView {
+            List(viewModel.cars) { car in
+                NavigationLink(destination: ListDetailView(manufacturer: car.manufacturer, description: car.description)) {
+                    HStack {
+                      Text(car.manufacturer)
+                        .foregroundColor(.gray)
+                        .font(.headline)
+                    }.padding(10)
+                }
+          }
+            .navigationBarTitle(Defaults.listTitle)
+        }
+    } //NavigationView
 }

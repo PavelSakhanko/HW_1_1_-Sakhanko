@@ -13,9 +13,3 @@ struct ModalScreen: View {
             .padding()
     }
 }
-
-struct ModalScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        ModalScreen()
-    }
-}

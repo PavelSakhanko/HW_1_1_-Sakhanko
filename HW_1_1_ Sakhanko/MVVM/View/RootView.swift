@@ -24,7 +24,7 @@ struct RootView: View {
                         Image(systemName: "house")
                         Text(Defaults.homeTabTitle)
                     }.tag(1)
-                    ListScreen().tabItem {
+                    ListScreen(viewModel: CarViewModel()).tabItem {
                         Image(systemName: "list.bullet")
                         Text(Defaults.listTabTitle)
                     }.tag(2)
@@ -33,11 +33,5 @@ struct RootView: View {
                         Text(Defaults.modalTabTitle)
                     }.tag(3)
                 })
-    }
-}
-
-struct RootView_Previews: PreviewProvider {
-    static var previews: some View {
-        RootView()
     }
 }

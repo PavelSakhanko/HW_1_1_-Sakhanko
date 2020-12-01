@@ -9,13 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        Text("1")
+        Text("Home")
             .padding()
-    }
-}
-
-struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScreen()
     }
 }
