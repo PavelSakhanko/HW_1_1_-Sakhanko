@@ -17,6 +17,7 @@
 		4B3C00E625769631006F7A37 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00E525769631006F7A37 /* Car.swift */; };
 		4B3C00E9257696C2006F7A37 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00E8257696C2006F7A37 /* CarViewModel.swift */; };
 		4B3C00EE25769A95006F7A37 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00ED25769A95006F7A37 /* ListDetailView.swift */; };
+		4B3C00F42576A612006F7A37 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00F32576A612006F7A37 /* GradientButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4B3C00E525769631006F7A37 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		4B3C00E8257696C2006F7A37 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		4B3C00ED25769A95006F7A37 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
+		4B3C00F32576A612006F7A37 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		4B0D00AB25768BBC00921C15 /* HW_1_1_ Sakhanko */ = {
 			isa = PBXGroup;
 			children = (
+				4B3C00F12576A4DF006F7A37 /* CustomUI */,
 				4B3C00E02576933A006F7A37 /* App */,
 				4B3C00DF2576932C006F7A37 /* MVVM */,
 				4B0D00B025768BBE00921C15 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				4B3C00E8257696C2006F7A37 /* CarViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B3C00F12576A4DF006F7A37 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				4B3C00F32576A612006F7A37 /* GradientButtonStyle.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3C00F42576A612006F7A37 /* GradientButtonStyle.swift in Sources */,
 				4B0D00AF25768BBC00921C15 /* RootView.swift in Sources */,
 				4B3C00EE25769A95006F7A37 /* ListDetailView.swift in Sources */,
 				4B3C00E9257696C2006F7A37 /* CarViewModel.swift in Sources */,
