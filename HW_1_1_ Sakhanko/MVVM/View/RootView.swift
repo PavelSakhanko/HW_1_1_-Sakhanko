@@ -16,15 +16,16 @@ struct RootView: View {
     }
 
     @State private var selectedItem = 1
+    @State private var isDetailsOpen = false
 
     var body: some View {
         TabView(selection: $selectedItem,
                 content:  {
-                    HomeScreen(tabSelection: $selectedItem).tabItem {
+                    HomeScreen(tabSelection: $selectedItem, isDetailsOpen: $isDetailsOpen).tabItem {
                         Image(systemName: "house")
                         Text(Defaults.homeTabTitle)
                     }.tag(1)
-                    ListScreen(viewModel: CarViewModel()).tabItem {
+                    ListScreen(viewModel: CarViewModel(), isDetailsOpen: $isDetailsOpen).tabItem {
                         Image(systemName: "list.bullet")
                         Text(Defaults.listTabTitle)
                     }.tag(2)

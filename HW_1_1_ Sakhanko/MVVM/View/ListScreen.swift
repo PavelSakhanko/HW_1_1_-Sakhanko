@@ -14,19 +14,33 @@ struct ListScreen: View {
     }
 
     @ObservedObject var viewModel: CarViewModel
+    @Binding var isDetailsOpen: Bool
 
     var body: some View {
         NavigationView {
             List(viewModel.cars) { car in
-                NavigationLink(destination: ListDetailView(manufacturer: car.manufacturer, description: car.description)) {
-                    HStack {
-                      Text(car.manufacturer)
-                        .foregroundColor(.gray)
-                        .font(.headline)
-                    }.padding(10)
+                ListCarItem(manufacturer: car.manufacturer, description: car.description)
+                .sheet(isPresented: $isDetailsOpen) {
+                    ListDetailView(manufacturer: car.manufacturer, description: car.description)
                 }
           }
             .navigationBarTitle(Defaults.listTitle)
         } //NavigationView
+    }
+}
+
+struct ListCarItem: View {
+    
+    let manufacturer: String
+    let description: String
+    
+    var body: some View {
+        NavigationLink(destination: ListDetailView(manufacturer: manufacturer, description: description)) {
+            HStack {
+                Text(manufacturer)
+                .foregroundColor(.gray)
+                .font(.headline)
+            }.padding(10)
+        }
     }
 }

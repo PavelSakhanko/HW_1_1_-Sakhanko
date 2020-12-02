@@ -14,10 +14,12 @@ struct HomeScreen: View {
     }
 
     @Binding var tabSelection: Int
+    @Binding var isDetailsOpen: Bool
 
     var body: some View {
         Button(action: {
             tabSelection = 2
+            isDetailsOpen = true
         }) {
             Text(Defaults.buttonTitle)
         }.buttonStyle(GradientButtonStyle())
