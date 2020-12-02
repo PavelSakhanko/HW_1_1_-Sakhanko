@@ -23,7 +23,7 @@ struct ModalScreen: View {
         }) {
             Text(Defaults.showModalTitle)
         }.sheet(isPresented: $showingModal) {
-            ListDetailView(manufacturer: Defaults.greetings, description: Defaults.greetingsDetail)
+            ListDetailView(manufacturer: Defaults.greetings, description: Defaults.greetingsDetail, closeModal: $showingModal)
         }.buttonStyle(GradientButtonStyle())
     }
 }

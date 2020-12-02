@@ -15,13 +15,14 @@ struct ListScreen: View {
 
     @ObservedObject var viewModel: CarViewModel
     @Binding var isDetailsOpen: Bool
+    @State private var showingModal = false
 
     var body: some View {
         NavigationView {
             List(viewModel.cars) { car in
                 ListCarItem(manufacturer: car.manufacturer, description: car.description)
                 .sheet(isPresented: $isDetailsOpen) {
-                    ListDetailView(manufacturer: car.manufacturer, description: car.description)
+                    ListDetailView(manufacturer: car.manufacturer, description: car.description, closeModal: $isDetailsOpen)
                 }
           }
             .navigationBarTitle(Defaults.listTitle)
@@ -33,9 +34,10 @@ struct ListCarItem: View {
     
     let manufacturer: String
     let description: String
+    @State private var showingModal = false
     
     var body: some View {
-        NavigationLink(destination: ListDetailView(manufacturer: manufacturer, description: description)) {
+        NavigationLink(destination: ListDetailView(manufacturer: manufacturer, description: description, closeModal: $showingModal)) {
             HStack {
                 Text(manufacturer)
                 .foregroundColor(.gray)
