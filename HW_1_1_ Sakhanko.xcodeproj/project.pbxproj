@@ -66,11 +66,10 @@
 		4B0D00AB25768BBC00921C15 /* HW_1_1_ Sakhanko */ = {
 			isa = PBXGroup;
 			children = (
-				4B3C00F12576A4DF006F7A37 /* CustomUI */,
 				4B3C00E02576933A006F7A37 /* App */,
 				4B3C00DF2576932C006F7A37 /* MVVM */,
-				4B0D00B025768BBE00921C15 /* Assets.xcassets */,
-				4B0D00B525768BBE00921C15 /* Info.plist */,
+				4B3C00F12576A4DF006F7A37 /* CustomUI */,
+				4BB24F1F2577D88D00ABF052 /* Sources */,
 				4B0D00B225768BBE00921C15 /* Preview Content */,
 			);
 			path = "HW_1_1_ Sakhanko";
@@ -136,6 +135,15 @@
 				4B3C00F32576A612006F7A37 /* GradientButtonStyle.swift */,
 			);
 			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		4BB24F1F2577D88D00ABF052 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4B0D00B525768BBE00921C15 /* Info.plist */,
+				4B0D00B025768BBE00921C15 /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +355,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_1_ Sakhanko/Preview Content\"";
 				DEVELOPMENT_TEAM = 5NGK57BNWL;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "HW_1_1_ Sakhanko/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HW_1_1_ Sakhanko/Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,7 +377,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_1_ Sakhanko/Preview Content\"";
 				DEVELOPMENT_TEAM = 5NGK57BNWL;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "HW_1_1_ Sakhanko/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HW_1_1_ Sakhanko/Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
