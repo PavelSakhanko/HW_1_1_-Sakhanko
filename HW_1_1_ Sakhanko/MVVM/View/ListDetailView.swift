@@ -12,9 +12,6 @@ struct ListDetailView: View {
     let manufacturer: String
     let description: String
 
-    @State var isDeviceOrientationHorizontal = UIScreen.main.bounds.size.width > UIScreen.main.bounds.size.height
-    @Binding var closeModal: Bool
-
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             HStack {
@@ -26,23 +23,7 @@ struct ListDetailView: View {
                 .foregroundColor(.black)
                 .font(.system(size: 20))
             Spacer()
-            VStack() {
-                if isDeviceOrientationHorizontal {
-                    Button(action: {
-                        closeModal.toggle()
-                    }) {
-                        Image(systemName: "xmark")
-                            .foregroundColor(.gray)
-                    }
-                }
-            }
-            Spacer()
         }
         .padding()
-        .onAppear(perform: {
-            if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-                isDeviceOrientationHorizontal.toggle()
-            }
-        })
     }
 }
