@@ -9,19 +9,23 @@ import SwiftUI
 
 struct HomeScreen: View {
 
-    struct Defaults {
-        static let buttonTitle = "Open List"
-    }
-
     @Binding var tabSelection: Int
-    @Binding var isDetailsOpen: Bool
+    @Binding var openDetails: Bool
+    @AppStorage("listItemNumber") var listItemNumber: Int = 0
 
     var body: some View {
-        Button(action: {
-            tabSelection = 2
-            isDetailsOpen = true
-        }) {
-            Text(Defaults.buttonTitle)
-        }.buttonStyle(GradientButtonStyle())
+        
+        HStack {
+            ForEach(0...2, id: \.self) { buttonId in
+                Button(action: {
+                    tabSelection = 2
+                    openDetails = true
+                    listItemNumber = buttonId
+                }) {
+                    Text("Open \(buttonId) item!")
+                }.tag(buttonId)
+                .buttonStyle(GradientButtonStyle())
+            }
+        }
     }
 }

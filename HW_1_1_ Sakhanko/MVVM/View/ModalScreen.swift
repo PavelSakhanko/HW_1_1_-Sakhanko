@@ -23,7 +23,18 @@ struct ModalScreen: View {
         }) {
             Text(Defaults.showModalTitle)
         }.sheet(isPresented: $showingModal) {
-            ListDetailView(manufacturer: Defaults.greetings, description: Defaults.greetingsDetail)
+            VStack(alignment: .center, spacing: 20) {
+                HStack {
+                    Text(Defaults.greetings)
+                        .foregroundColor(.gray)
+                        .font(.system(size: 30))
+                }
+                Text(Defaults.greetingsDetail)
+                    .foregroundColor(.black)
+                    .font(.system(size: 20))
+                Spacer()
+            }
+            .padding()
         }.buttonStyle(GradientButtonStyle())
     }
 }

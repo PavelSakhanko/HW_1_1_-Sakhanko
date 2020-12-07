@@ -14,34 +14,65 @@ struct ListScreen: View {
     }
 
     @ObservedObject var viewModel: CarViewModel
-    @Binding var isDetailsOpen: Bool
-
+    @ObservedObject var model = Model {_ in }
+    @Binding var willMoveToNextScreen: Bool
+   
     var body: some View {
-        NavigationView {
-            List(viewModel.cars) { car in
-                ListCarItem(manufacturer: car.manufacturer, description: car.description)
-                .sheet(isPresented: $isDetailsOpen) {
-                    ListDetailView(manufacturer: car.manufacturer, description: car.description)
+        ZStack {
+            Color.white.edgesIgnoringSafeArea(.all)
+            NavigationView {
+                List(viewModel.cars, id: \.id) { car in
+                    if willMoveToNextScreen {
+                        navigateFromHome(car: car, viewModel: viewModel)
+                    } else {
+                        navigateFromList(car: car, viewModel: viewModel)
+                    }
                 }
-          }
-            .navigationBarTitle(Defaults.listTitle)
-        } //NavigationView
+                .navigationBarTitle(Defaults.listTitle)
+            } //NavigationView
+        }
+    }
+    
+    func navigateFromHome(car: Car, viewModel: CarViewModel) -> some View {
+        NavigationLink(destination: ListDetailView(viewModel: viewModel), isActive: $willMoveToNextScreen) {
+            HStack {
+                RowLabel(txt: car.manufacturer, tag: car.id, selected: car.id)
+            }.padding(10)
+        }
+    }
+    
+    func navigateFromList(car: Car, viewModel: CarViewModel) -> some View {
+        NavigationLink(destination: ListDetailView(viewModel: viewModel), tag: car.id, selection: $model.selection) {
+            RowLabel(txt: car.manufacturer, tag: car.id, selected: model.selected).padding(10)
+        }
     }
 }
 
-struct ListCarItem: View {
-    
-    let manufacturer: String
-    let description: String
-    @State private var showingModal = false
-    
-    var body: some View {
-        NavigationLink(destination: ListDetailView(manufacturer: manufacturer, description: description)) {
-            HStack {
-                Text(manufacturer)
-                .foregroundColor(.gray)
-                .font(.headline)
-            }.padding(10)
+class Model: ObservableObject {
+    @Published var selection: Int? {
+        willSet {
+            if let nv = newValue {
+                selected = nv
+                willChangeSelection?(selected)
+                UserDefaults.standard.set(selected, forKey: "listItemNumber")
+            }
         }
+    }
+    var selected: Int = 0
+    let willChangeSelection: ((Int) -> Void)?
+    init( onSelection: ((Int)->Void)? ) {
+        willChangeSelection = onSelection
+        selection = nil
+    }
+}
+
+struct RowLabel: View {
+    let txt: String
+    let tag: Int
+    let selected: Int
+    var body: some View {
+        Text(txt)
+            .foregroundColor(.gray)
+            .font(.headline)
     }
 }

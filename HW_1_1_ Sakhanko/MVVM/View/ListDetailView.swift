@@ -8,22 +8,36 @@
 import SwiftUI
 
 struct ListDetailView: View {
-    
-    let manufacturer: String
-    let description: String
+    @ObservedObject var viewModel: CarViewModel
+    @AppStorage("listItemNumber") var listItemNumber: Int = 0
 
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
-            HStack {
-                Text(manufacturer)
-                    .foregroundColor(.gray)
-                    .font(.system(size: 30))
-            }
-            Text(description)
-                .foregroundColor(.black)
-                .font(.system(size: 20))
+            showCarManufacturer()
+            showCarDescription()
             Spacer()
         }
         .padding()
+    }
+    
+    func showCarManufacturer() -> some View {
+        var text = Text("")
+        for (index, car) in viewModel.cars.enumerated() {
+            if index == listItemNumber {
+                text = Text(car.manufacturer)
+            }
+        }
+        return text
+    }
+    
+    func showCarDescription() -> some View {
+        var text = Text("")
+        for (index, car) in viewModel.cars.enumerated() {
+            if index == listItemNumber {
+                text = Text(car.description)
+            }
+        }
+
+        return text
     }
 }

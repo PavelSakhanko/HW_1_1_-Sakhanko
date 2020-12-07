@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Car: Identifiable {
-    let id = UUID().uuidString
+struct Car: Identifiable, Hashable, Codable {
+    let id: Int
     let manufacturer: String
     let description: String
 }
