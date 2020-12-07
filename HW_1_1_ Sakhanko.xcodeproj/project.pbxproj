@@ -18,6 +18,8 @@
 		4B3C00E9257696C2006F7A37 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00E8257696C2006F7A37 /* CarViewModel.swift */; };
 		4B3C00EE25769A95006F7A37 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00ED25769A95006F7A37 /* ListDetailView.swift */; };
 		4B3C00F42576A612006F7A37 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C00F32576A612006F7A37 /* GradientButtonStyle.swift */; };
+		4BE2DB3C257E6B97005A9868 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE2DB3B257E6B97005A9868 /* ListItem.swift */; };
+		4BE2DB3F257E6C03005A9868 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE2DB3E257E6C03005A9868 /* ListItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4B3C00E8257696C2006F7A37 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		4B3C00ED25769A95006F7A37 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
 		4B3C00F32576A612006F7A37 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
+		4BE2DB3B257E6B97005A9868 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		4BE2DB3E257E6C03005A9868 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				4B3C00E525769631006F7A37 /* Car.swift */,
+				4BE2DB3E257E6C03005A9868 /* ListItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				4B3C00D9257692D3006F7A37 /* ListScreen.swift */,
 				4B3C00ED25769A95006F7A37 /* ListDetailView.swift */,
 				4B3C00DC257692F0006F7A37 /* ModalScreen.swift */,
+				4BE2DB3B257E6B97005A9868 /* ListItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE2DB3C257E6B97005A9868 /* ListItem.swift in Sources */,
 				4B3C00F42576A612006F7A37 /* GradientButtonStyle.swift in Sources */,
 				4B0D00AF25768BBC00921C15 /* RootView.swift in Sources */,
 				4B3C00EE25769A95006F7A37 /* ListDetailView.swift in Sources */,
@@ -223,6 +230,7 @@
 				4B3C00E625769631006F7A37 /* Car.swift in Sources */,
 				4B0D00AD25768BBC00921C15 /* HW_1_1__SakhankoApp.swift in Sources */,
 				4B3C00D7257692AE006F7A37 /* HomeScreen.swift in Sources */,
+				4BE2DB3F257E6C03005A9868 /* ListItemModel.swift in Sources */,
 				4B3C00DA257692D3006F7A37 /* ListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
